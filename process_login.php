@@ -9,10 +9,11 @@ $db_name = "advising";
 $db = mysql_connect($server,$username,$password) or DIE("Connection to database failed, perhaps the service is down !!");
 mysql_select_db($db_name) or DIE("Database name not available !!");
 
-$login = mysql_query("select * from users where (username = '" . $_POST['username'] . "') and (password = '" . md5($_POST['password']) . "')",$db);
+$login = mysql_query("select * from users where (username = '" . $_POST['myusername'] . "') and (password = '" . md5($_POST['mypassword']) . "')",$db);
 $rowcount = mysql_num_rows($login);
+
 if ($rowcount == 1) {
-$_SESSION['username'] = $_POST['username'];
+$_SESSION['username'] = $_POST['myusername'];
 
 //Todo: change the display.php to welcome page filename
 header("Location: display.html");
