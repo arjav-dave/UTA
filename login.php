@@ -15,7 +15,7 @@ if ($rowcount == 1) {
 $_SESSION['username'] = $_POST['username'];
 
 //Todo: change the display.php to welcome page filename
-header("Location: display.php");
+header("Location: display.html");
 }
 else
 {
