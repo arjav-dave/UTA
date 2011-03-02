@@ -97,8 +97,6 @@ body  {
 /* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
 </style>
 <![endif]-->
-<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
-<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="twoColElsLtHdr">
@@ -117,62 +115,47 @@ body  {
   <!-- end #sidebar1 --></div>
   <div id="mainContent"></div>
 	<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
-<table width="466" height="405" border="0" align="right" cellpadding="0">
-	  <tr>
-	    <td width="14">&nbsp;</td>
-	    <td width="421"><blockquote>
-	      <blockquote>
-	        <p><strong>Enter the Log In Credentials</strong></p>
-          </blockquote>
-        </blockquote></td>
-	    <td width="9">&nbsp;</td>
-      </tr>
-	  <tr>
-	    <td height="284">&nbsp;</td>
-	    <td><form id="username" name="username" method="post" action="">
-	      <label><strong>   Username</strong>
-	        <input type="text" name="Username" id="Username" />
-	      </label>
-        </form>
-          <form id="form1" name="form1" method="post" action="">
-            <span id="sprypassword1">
-              <label><strong><br />
-              Password</strong>
-                <input type="password" name="Password" id="Password" />
-              </label>
-              <span class="passwordRequiredMsg">A value is required.</span></span>
-          </form>
-        <p>&nbsp;</p>
-        <form id="form2" name="form2" method="post" action="">
+  <table width="466" height="405" border="0" align="right" cellpadding="0">
+	<tr>
+      <td><table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+  <tr>
+    <form name="form1" method="post" action="checklogin.php">
+      <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+        <tr>
+          <td colspan="3"><strong>Enter your Log In Credentials </strong></td>
+        </tr>
+        <tr>
+          <td width="78">Username</td>
+          <td width="6">:</td>
+          <td width="294"><input name="myusername" type="text" id="myusername" /></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>:</td>
+          <td><input name="mypassword" type="password" id="mypassword" /></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td><input type="submit" name="Submit" value="Login" /></td>
+        </tr>
+      </table></td>
+    </form>
+  </tr>
+</table>
+        <blockquote>
           <blockquote>
             <blockquote>
-              <blockquote>
-                <p>
-                  <input type="submit" name="Login" id="Login" value="Submit" />
-                </p>
-              </blockquote>
+              <p>&nbsp;<a href="#">Forgot your password?</a></p>
             </blockquote>
           </blockquote>
-        </form>
-        <p><a href="forgotyourpassword.php" title="Forgot Your Password"><strong>Forgot your password ?</strong></a></p></td>
-	    <td><p>&nbsp;</p>
-        <p>&nbsp;</p></td>
-      </tr>
-	  <tr>
-	    <td>&nbsp;</td>
-	    <td>&nbsp;</td>
-	    <td>&nbsp;</td>
-      </tr>
+      </blockquote></td>
+	</tr>
   </table>
-<br class="clearfloat" />
+  <br class="clearfloat" />
    <div id="footer">
     <p>&nbsp;</p>
   <!-- end #footer --></div>
 <!-- end #container --></div>
-<script type="text/javascript">
-<!--
-var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
-//-->
-</script>
 </body>
 </html>
