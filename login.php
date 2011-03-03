@@ -146,7 +146,7 @@ body  {
         <blockquote>
           <blockquote>
             <blockquote>
-              <p>&nbsp;<a href="#">Forgot your password?</a></p>
+              <p>&nbsp;<a href="process_forgot_password.php">Forgot your password?</a></p>
             </blockquote>
           </blockquote>
       </blockquote></td>
