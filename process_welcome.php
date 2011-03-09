@@ -10,8 +10,11 @@ else{
 die("DB connection successful");
 }
 
-$student_profile = mysql_query("SELECT Username, User_ID, User_Type FROM USER_INFO '")
+mysql_select_db("advising");
+$student_profile = mysql_query("SELECT * FROM USER_INFO")
 or die(mysql_error());
+
+echo mysql_fetch_array($student_profile)['Username'];
 
 $student_courses = mysql_query("Select STUDENT_ID,COURSE1,COURSE2,COURSE3,COURSE4,COURSE5,COURSE6,COURSE7,COURSE8,COURSE9,COURSE10,COURSE11,COURSE12 from USERDETAILS_INFO '")    
 or die(mysql_error());
